@@ -16,8 +16,8 @@ python proxy-classifier.py
 
 ## Run infinity inference with mxbai-rerank-v2 model
 In a separate terminal. Use the model Michael Feil already converted for us, thanks Michael!
-- `michaelfeil/mxbai-rerank-large-v2-seq` 
-- `michaelfeil/mxbai-rerank-base-v2-seq`:
+- [michaelfeil/mxbai-rerank-large-v2-seq](https://huggingface.co/michaelfeil/mxbai-rerank-large-v2-seq)
+- [michaelfeil/mxbai-rerank-base-v2-seq](https://huggingface.co/michaelfeil/mxbai-rerank-base-v2-seq)
 ```shell
 infinity_emb v2 --port 7997 \
   --model-id michaelfeil/mxbai-rerank-large-v2-seq --batch-size 8 --revision "refs/heads/main" \
