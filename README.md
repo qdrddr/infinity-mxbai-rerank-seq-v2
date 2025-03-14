@@ -42,3 +42,39 @@ curl --location 'http://localhost:8002/v1/rerank' \
     "top_n": 4
   }'
 ```
+
+### Result Example
+```json
+{
+    "object": "rerank",
+    "results": [
+        {
+            "relevance_score": 0.9999322891235352,
+            "index": 2,
+            "document": null
+        },
+        {
+            "relevance_score": 0.8560222387313843,
+            "index": 0,
+            "document": null
+        },
+        {
+            "relevance_score": 0.7231764197349548,
+            "index": 1,
+            "document": null
+        },
+        {
+            "relevance_score": 0.44487491250038147,
+            "index": 3,
+            "document": null
+        }
+    ],
+    "model": "michaelfeil/mxbai-rerank-large-v2-seq",
+    "usage": {
+        "prompt_tokens": 1642,
+        "total_tokens": 1642
+    },
+    "id": "infinity-6fd026a3-ea6b-4b5e-bc04-4b6f1953766a",
+    "created": 1741979826
+}
+```
