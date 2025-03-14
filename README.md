@@ -1,4 +1,4 @@
-# Classifier Proxy for infinity
+# Classifier 2 Rerrank Proxy for infinity
 This app acts as a proxy to your running infinity inference. It utilizes classifier endpoint of the infinity on backend, and presents it as a reranking endpoint on the frontend so you can use it with LiteLLM.
 
 ## Prepare
