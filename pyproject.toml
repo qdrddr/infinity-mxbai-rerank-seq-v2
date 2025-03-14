@@ -1,0 +1,7 @@
+[project]
+name = "mxbai-rerank-large-v2-seq"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
