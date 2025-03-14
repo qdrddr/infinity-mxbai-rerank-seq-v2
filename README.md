@@ -1,4 +1,4 @@
-# Classifier 2 Rerrank Proxy with infinity for mxbai-rerank-v2
+# Classifier 2 Rerrank Infinity Proxy for mxbai-rerank-v2
 This app acts as a proxy to your running infinity inference. It utilizes classifier endpoint of the infinity on backend, and presents it as a reranking endpoint on the frontend so you can use it with LiteLLM.
 
 ## Reasoning
