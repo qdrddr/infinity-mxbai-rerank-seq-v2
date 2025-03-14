@@ -14,7 +14,7 @@ python proxy-classifier.py
 ```
 
 
-## Run infinity
+## Run infinity inference with mxbai-rerank-v2 model
 In a separate terminal. Use the model Michael Feil already converted for us, thanks Michael!
 - `michaelfeil/mxbai-rerank-large-v2-seq` 
 - `michaelfeil/mxbai-rerank-base-v2-seq`:
