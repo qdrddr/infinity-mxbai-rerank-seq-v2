@@ -1,5 +1,8 @@
-## install 
-Using the [setup.sh](setup.sh) script
+# Classifier Proxy for infinity
+This app acts as a proxy to your running infinity inference. It utilizes classifier endpoint of the infinity on backend, and presents it as a reranking endpoint on the frontend so you can use it with LiteLLM.
+
+## Prepare
+Using the [setup.sh](setup.sh) script.
 
 ## Run this proxy
 
@@ -9,7 +12,9 @@ python proxy-classifier.py
 
 
 ## Run infinity
-in a separate terminal. Use the model michael already converted for us: `michaelfeil/mxbai-rerank-large-v2-seq` or `michaelfeil/mxbai-rerank-base-v2-seq`:
+In a separate terminal. Use the model Michael Feil already converted for us, thanks Michael!
+- `michaelfeil/mxbai-rerank-large-v2-seq` 
+- `michaelfeil/mxbai-rerank-base-v2-seq`:
 ```shell
 infinity_emb v2 --port 7997 \
   --model-id michaelfeil/mxbai-rerank-large-v2-seq --batch-size 8 --revision "refs/heads/main" \
