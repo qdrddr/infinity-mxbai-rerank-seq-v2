@@ -1,5 +1,5 @@
 ## install 
-Using the setup.sh script
+Using the [setup.sh](setup.sh) script
 
 ## Run this proxy
 
