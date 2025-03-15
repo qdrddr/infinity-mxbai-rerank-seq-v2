@@ -1,71 +1,106 @@
 [
     {
-        "object": "classify",
-        "data": [
-            [
-                {
-                    "score": 0.8560222387313843,
-                    "label": "1"
-                },
-                {
-                    "score": 0.14397774636745453,
-                    "label": "0"
-                }
-            ]
-        ],
-        "model": "michaelfeil/mxbai-rerank-large-v2-seq",
-        "usage": {
-            "prompt_tokens": 396,
-            "total_tokens": 396
+        "request": {
+            "input": [
+                "Query: What is the capital of the United States?\nDocument: \"Carson City is the capital city of the American state of Nevada.\"\n\nYou are a search relevance expert who evaluates how well documents match search queries. For each query-document pair, carefully analyze the semantic relationship between them, then provide your binary relevance judgment (0 for not relevant, 1 for relevant).\nRelevance:\n"
+            ],
+            "model": "michaelfeil/mxbai-rerank-large-v2-seq",
+            "raw_scores": true
         },
-        "id": "infinity-f1625db8-5a51-4c87-adb1-0dd41478f3c8",
-        "created": 1742001632
+        "reply": {
+            "object": "classify",
+            "data": [
+                [
+                    {
+                        "score": 0.8560222387313843,
+                        "label": "1"
+                    },
+                    {
+                        "score": 0.14397774636745453,
+                        "label": "0"
+                    }
+                ]
+            ],
+            "model": "michaelfeil/mxbai-rerank-large-v2-seq",
+            "usage": {
+                "prompt_tokens": 396,
+                "total_tokens": 396
+            },
+            "id": "infinity-f1625db8-5a51-4c87-adb1-0dd41478f3c8",
+            "created": 1742001632
+        }
     },
     {
-        "object": "classify",
-        "data": [
-            [
-                {
-                    "score": 0.7231764197349548,
-                    "label": "1"
-                },
-                {
-                    "score": 0.27682358026504517,
-                    "label": "0"
-                }
-            ]
-        ],
-        "model": "michaelfeil/mxbai-rerank-large-v2-seq",
-        "usage": {
-            "prompt_tokens": 447,
-            "total_tokens": 447
+        "request": {
+            "input": [
+                "Query: What is the capital of the United States?\nDocument: \"The Commonwealth of the Northern Mariana Islands is a group of islands in the Pacific Ocean. Its capital is Saipan.\"\n\nYou are a search relevance expert who evaluates how well documents match search queries. For each query-document pair, carefully analyze the semantic relationship between them, then provide your binary relevance judgment (0 for not relevant, 1 for relevant).\nRelevance:\n"
+            ],
+            "model": "michaelfeil/mxbai-rerank-large-v2-seq",
+            "raw_scores": true
         },
-        "id": "infinity-ee3c6f94-c27f-4997-8cd3-1d6ce3ac3024",
-        "created": 1742001644
+        "reply": {
+            "object": "classify",
+            "data": [
+                [
+                    {
+                        "score": 0.7231764197349548,
+                        "label": "1"
+                    },
+                    {
+                        "score": 0.27682358026504517,
+                        "label": "0"
+                    }
+                ]
+            ],
+            "model": "michaelfeil/mxbai-rerank-large-v2-seq",
+            "usage": {
+                "prompt_tokens": 447,
+                "total_tokens": 447
+            },
+            "id": "infinity-ee3c6f94-c27f-4997-8cd3-1d6ce3ac3024",
+            "created": 1742001644
+        }
     },
     {
-        "object": "classify",
-        "data": [
-            [
-                {
-                    "score": 0.9999322891235352,
-                    "label": "1"
-                },
-                {
-                    "score": 0.00006767479499103501,
-                    "label": "0"
-                }
-            ]
-        ],
-        "model": "michaelfeil/mxbai-rerank-large-v2-seq",
-        "usage": {
-            "prompt_tokens": 385,
-            "total_tokens": 385
+        "request": {
+            "input": [
+                "Query: What is the capital of the United States?\nDocument: \"Washington, D.C. is the capital of the United States.\"\n\nYou are a search relevance expert who evaluates how well documents match search queries. For each query-document pair, carefully analyze the semantic relationship between them, then provide your binary relevance judgment (0 for not relevant, 1 for relevant).\nRelevance:\n"
+            ],
+            "model": "michaelfeil/mxbai-rerank-large-v2-seq",
+            "raw_scores": true
         },
-        "id": "infinity-4ea5f50d-3883-481a-b88c-680e898e01d7",
-        "created": 1742001656
+        "reply": {
+            "object": "classify",
+            "data": [
+                [
+                    {
+                        "score": 0.9999322891235352,
+                        "label": "1"
+                    },
+                    {
+                        "score": 0.00006767479499103501,
+                        "label": "0"
+                    }
+                ]
+            ],
+            "model": "michaelfeil/mxbai-rerank-large-v2-seq",
+            "usage": {
+                "prompt_tokens": 385,
+                "total_tokens": 385
+            },
+            "id": "infinity-4ea5f50d-3883-481a-b88c-680e898e01d7",
+            "created": 1742001656
+        }
     },
     {
+    "request": {
+        "input": [
+            "Query: What is the capital of the United States?\nDocument: \"Capital punishment has existed in the United States since before it was a country.\"\n\nYou are a search relevance expert who evaluates how well documents match search queries. For each query-document pair, carefully analyze the semantic relationship between them, then provide your binary relevance judgment (0 for not relevant, 1 for relevant).\nRelevance:\n"
+        ],
+        "model": "michaelfeil/mxbai-rerank-large-v2-seq",
+        "raw_scores": true
+    },
+    "reply": {
         "object": "classify",
         "data": [
             [
@@ -87,4 +122,5 @@
         "id": "infinity-73eedb23-5fb6-490f-bfaf-2d336f553827",
         "created": 1742001669
     }
+}
 ]
