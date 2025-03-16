@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field
 from fastapi import FastAPI, HTTPException, Header
 from create_mxbai_v2_reranker_prompt_template import create_mxbai_v2_reranker_prompt_template as templating
 
-app = FastAPI(title="MXbai Rerank API")
+app = FastAPI(title="Rerank proxy for Infinity Classifier")
 
 # Define request/response models
 class RerankRequest(BaseModel):
