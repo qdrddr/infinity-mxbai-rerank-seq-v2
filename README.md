@@ -31,7 +31,7 @@ In a separate terminal. Use the model Michael Feil already converted for us, tha
 
 ```shell
 infinity_emb v2 --port 7997 \
-  --model-id michaelfeil/mxbai-rerank-large-v2-seq --batch-size 8 --revision "refs/heads/main" \
+  --model-id michaelfeil/mxbai-rerank-large-v2-seq --batch-size 1 --revision "refs/heads/main" \
   --url-prefix "/v1"
 ```
 
