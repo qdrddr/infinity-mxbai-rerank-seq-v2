@@ -12,8 +12,14 @@ Using the [setup.sh](setup.sh) script.
 
 ## Run this proxy
 
+Using Python
 ```shell
 python proxy-classifier.py
+```
+
+Or using docker:
+```shell
+docker compose -f docker-compose.yaml up -d
 ```
 
 ## Run infinity inference with mxbai-rerank-v2 model
