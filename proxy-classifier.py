@@ -8,6 +8,8 @@ from pydantic import BaseModel, Field
 from fastapi import FastAPI, HTTPException, Header
 from create_mxbai_v2_reranker_prompt_template import create_mxbai_v2_reranker_prompt_template as templating
 
+inference_host = os.environ.get("INFERENCE_HOST", "localhost")
+
 app = FastAPI(title="Rerank proxy for Infinity Classifier")
 
 # Define request/response models
@@ -62,7 +64,7 @@ async def rerank(request: RerankRequest, authorization: Optional[str] = Header(N
     try:
         # Call classification endpoint
         response = requests.post(
-            "http://0.0.0.0:7997/v1/classify", 
+            f"http://{inference_host}:7997/v1/classify", 
             headers=headers, 
             data=json.dumps(payload)
         )

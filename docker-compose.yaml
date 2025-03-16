@@ -1,0 +1,12 @@
+#version: "3.8"
+
+services:
+  proxy:
+    build: .
+    ports:
+      - "8002:8002"
+    environment:
+      - INFERENCE_HOST=host.docker.internal
+#      - TOKEN="test"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
