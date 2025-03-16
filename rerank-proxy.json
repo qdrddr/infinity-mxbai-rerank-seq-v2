@@ -1,44 +1,44 @@
 {
-  "request": {
-    "model": "michaelfeil/mxbai-rerank-large-v2-seq",
-    "query": "What is the capital of the United States?",
-    "documents": [
-      "Carson City is the capital city of the American state of Nevada.",
-      "The Commonwealth of the Northern Mariana Islands is a group of islands in the Pacific Ocean. Its capital is Saipan.",
-      "Washington, D.C. is the capital of the United States.",
-      "Capital punishment has existed in the United States since before it was a country."
-    ]
-  },
-  "reply": {
-    "object": "rerank",
-    "results": [
-      {
-        "relevance_score": 0.9999376535415649,
-        "index": 2,
-        "document": null
-      },
-      {
-        "relevance_score": 0.8059484362602234,
-        "index": 0,
-        "document": null
-      },
-      {
-        "relevance_score": 0.7645230293273926,
-        "index": 1,
-        "document": null
-      },
-      {
-        "relevance_score": 0.4144435524940491,
-        "index": 3,
-        "document": null
-      }
-    ],
-    "model": "michaelfeil/mxbai-rerank-large-v2-seq",
-    "usage": {
-      "prompt_tokens": 1650,
-      "total_tokens": 1650
+    "request": {
+        "model": "michaelfeil/mxbai-rerank-large-v2-seq",
+        "query": "What is the capital of the United States?",
+        "documents": [
+            "Carson City is the capital city of the American state of Nevada.",
+            "The Commonwealth of the Northern Mariana Islands is a group of islands in the Pacific Ocean. Its capital is Saipan.",
+            "Washington, D.C. is the capital of the United States.",
+            "Capital punishment has existed in the United States since before it was a country."
+        ]
     },
-    "id": "infinity-f579eb78-bd3d-4a91-91f8-93cc003e6772",
-    "created": 1742003120
-  }
+    "reply": {
+        "object": "rerank",
+        "results": [
+            {
+                "relevance_score": 0.9999301433563232,
+                "index": 2,
+                "document": null
+            },
+            {
+                "relevance_score": 0.8872248530387878,
+                "index": 0,
+                "document": null
+            },
+            {
+                "relevance_score": 0.8324779272079468,
+                "index": 1,
+                "document": null
+            },
+            {
+                "relevance_score": 0.44686806201934814,
+                "index": 3,
+                "document": null
+            }
+        ],
+        "model": "michaelfeil/mxbai-rerank-large-v2-seq",
+        "usage": {
+            "prompt_tokens": 2282,
+            "total_tokens": 2282
+        },
+        "id": "infinity-9d00343b-20a9-4d69-9367-438a68bc08cb",
+        "created": 1742163022
+    }
 }

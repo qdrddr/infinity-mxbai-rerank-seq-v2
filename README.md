@@ -1,10 +1,13 @@
 # Classifier 2 Rerrank Infinity Proxy for mxbai-rerank-v2
-This app acts as a proxy to your running infinity inference. It utilizes classifier endpoint of the infinity on backend, and presents it as a reranking endpoint on the frontend so you can use it with LiteLLM.
+
+This app acts as a proxy to your running infinity inference. It utilizes classifier endpoint route of the infinity on backend, and presents itself as a reranking endpoint on the frontend so you can use it with LiteLLM.
 
 ## Reasoning
-Michael from Infinity [recommended](https://github.com/michaelfeil/infinity/issues/552) to run model as a classifier. If you want to utilize this model via reranking endpoint with your application (such as LiteLLM) that expects reranking endpoint format you need to run this proxy.
+
+Michael from Infinity [recommended](https://github.com/michaelfeil/infinity/issues/552) to run model as a classifier. If you want to utilize this model via reranking endpoint with your application (such as LiteLLM) that expects reranking endpoint format you need to run application like this.
 
 ## Prepare
+
 Using the [setup.sh](setup.sh) script.
 
 ## Run this proxy
@@ -13,11 +16,13 @@ Using the [setup.sh](setup.sh) script.
 python proxy-classifier.py
 ```
 
-
 ## Run infinity inference with mxbai-rerank-v2 model
+
 In a separate terminal. Use the model Michael Feil already converted for us, thanks Michael!
+
 - [michaelfeil/mxbai-rerank-large-v2-seq](https://huggingface.co/michaelfeil/mxbai-rerank-large-v2-seq)
 - [michaelfeil/mxbai-rerank-base-v2-seq](https://huggingface.co/michaelfeil/mxbai-rerank-base-v2-seq)
+
 ```shell
 infinity_emb v2 --port 7997 \
   --model-id michaelfeil/mxbai-rerank-large-v2-seq --batch-size 8 --revision "refs/heads/main" \
@@ -44,37 +49,38 @@ curl --location 'http://localhost:8002/v1/rerank' \
 ```
 
 ### Result Example
+
 ```json
 {
-    "object": "rerank",
-    "results": [
-        {
-            "relevance_score": 0.9999322891235352,
-            "index": 2,
-            "document": null
-        },
-        {
-            "relevance_score": 0.8560222387313843,
-            "index": 0,
-            "document": null
-        },
-        {
-            "relevance_score": 0.7231764197349548,
-            "index": 1,
-            "document": null
-        },
-        {
-            "relevance_score": 0.44487491250038147,
-            "index": 3,
-            "document": null
-        }
-    ],
-    "model": "michaelfeil/mxbai-rerank-large-v2-seq",
-    "usage": {
-        "prompt_tokens": 1642,
-        "total_tokens": 1642
+  "object": "rerank",
+  "results": [
+    {
+      "relevance_score": 0.9999301433563232,
+      "index": 2,
+      "document": null
     },
-    "id": "infinity-6fd026a3-ea6b-4b5e-bc04-4b6f1953766a",
-    "created": 1741979826
+    {
+      "relevance_score": 0.8872248530387878,
+      "index": 0,
+      "document": null
+    },
+    {
+      "relevance_score": 0.8324779272079468,
+      "index": 1,
+      "document": null
+    },
+    {
+      "relevance_score": 0.44686806201934814,
+      "index": 3,
+      "document": null
+    }
+  ],
+  "model": "michaelfeil/mxbai-rerank-large-v2-seq",
+  "usage": {
+    "prompt_tokens": 2282,
+    "total_tokens": 2282
+  },
+  "id": "infinity-9d00343b-20a9-4d69-9367-438a68bc08cb",
+  "created": 1742163022
 }
 ```

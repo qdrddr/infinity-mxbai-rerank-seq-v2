@@ -6,7 +6,7 @@ import uuid
 from typing import List, Optional
 from pydantic import BaseModel, Field
 from fastapi import FastAPI, HTTPException, Header
-
+from create_mxbai_v2_reranker_prompt_template import create_mxbai_v2_reranker_prompt_template as templating
 
 app = FastAPI(title="MXbai Rerank API")
 
@@ -40,9 +40,7 @@ class RerankResponse(BaseModel):
 async def rerank(request: RerankRequest, authorization: Optional[str] = Header(None)):
     # Prepare inputs for the classifier endpoint
     inputs = [
-        # 
-        f"Query: \"{request.query}\"\nDocument: \"{doc}\"\n\nYou are a search relevance expert who evaluates how well documents match search queries. For each query-document pair, carefully analyze the semantic relationship between them, then provide your binary relevance judgment (0 for not relevant, 1 for relevant).\nRelevance:\n"
-        #f"You are a search relevance expert who evaluates how well documents match search queries. For each query-document pair, carefully analyze the semantic relationship between them, then provide your binary relevance judgment (0 for not relevant, 1 for relevant).\nQuery: \"{request.query}\"?\nDocument: \"{doc}\""
+        templating(request.query, doc)
         for doc in request.documents
     ]
 
